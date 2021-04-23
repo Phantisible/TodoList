@@ -1,0 +1,47 @@
+<%- include('./partials/head.ejs') %>
+
+<body>
+<!-- Page content -->
+<div class="w3-content w3-padding">
+    <% var count = 0 %>
+    <% for(i=0;i < tasks.length ; i++) { %>
+        <% if(tasks[i].status == 'pending'){%>
+            <% ++count %>
+        <% } %>    
+    <% } %>
+    <!-- Project Section -->
+    <div class="w3-container w3-padding-32" id="projects">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="color: white;">Tasks: <%= count %></h3>
+      <a style="color:red;" href='/home'>Go Back</a>
+    </div>
+        
+     
+
+    <section id="services" class="services section-bg">
+        <div class="container">
+          <div class="row">
+                
+                <% for(i=0;i < tasks.length ; i++) { %>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" style="margin-bottom: 1vw;">
+                    <div class="icon-box" style="height: 325px;width: 325px; border: 1px solid black;">
+                        <div class="icon"></div>
+                        <div class="w3-display-topleft w3-black w3-padding"><%= tasks[i].task %></div>
+                        <h6><%= tasks[i].description %> </h6>
+                        <p> Status:&nbsp;<em> <%= tasks[i].status %></em> </p> <hr>
+                        <%if(tasks[i].status == 'pending'){%>
+                        <a href="/task/update_task?id=<%= tasks[i].id %>" style="color: rgba(19, 117, 30, 0.687);"><i class="fas fa-check-circle"></i></a>
+                        <% } %>
+
+                        <a href="/task/update_task?id=<%= tasks[i].id %>" style="color: green;"><i class="fas fa-edit"></i></a>
+
+                        <a href="/task/delete_task?id=<%= tasks[i].id %>" style="color: red;"><i class="fas fa-minus-circle"></i></a>
+                    </div>
+                </div> 
+                <% } %>
+          </div>
+    
+        </div>
+    </section>
+  </div>
+  </body>
+  </html>

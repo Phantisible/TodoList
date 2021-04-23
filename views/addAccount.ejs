@@ -1,0 +1,113 @@
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Todolist</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<!--===============================================================================================-->
+
+<!--Bootsrap 4 CDN-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<!--Fontawesome CDN-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+	    	<div class="card-header" >
+					<h3>Sign Up</h3>
+          <% if( typeof(err) != 'undefined') { %>
+           <h5 style="color:red"> <%= err %> </h5>
+          <% }%>
+        </div>
+
+        <form action="/account/create_account" method="POST">
+
+          <div class="input-group form-group" data-validate = "Enter username">
+            <div class="input-group-prepend">
+              <span class="input-group-text" data-placeholder="&#xe82a;"><i class="fas fa-user"></i></span>
+            </div>
+            <input class="form-control" type="username" name="username" placeholder="Username" required>
+          </div>
+
+          <div class="input-group form-group" data-validate = "Enter username">
+            <div class="input-group-prepend">
+              <span class="input-group-text" data-placeholder="&#xe82a;"><i class="fas fa-envelope"></i></span>
+            </div>
+						<input class="form-control" type="email" name="email" placeholder="Email" required>
+					</div>
+
+					<div class="input-group form-group" data-validate="Enter password">
+            <div class="input-group-prepend">
+              <span class="input-group-text" data-placeholder="&#xe82a;"><i class="fas fa-key"></i></span>
+            </div>
+						<input class="form-control" type="password" name="password" placeholder="Password" required>
+					</div>
+          <div class="input-group form-group" data-validate="Confirm password">
+            <div class="input-group-prepend">
+              <span class="input-group-text" data-placeholder="&#xe82a;"><i class="fas fa-key"></i></span>
+            </div>
+						<input class="form-control" type="password" name="password2" placeholder="Confirm password" required>
+					</div>
+
+					<div class="form-group">
+            <input type="submit" value="Submit" class="btn login_btn">
+          </div>
+        </form>
+      
+            <div class="card-footer">
+              <div class="d-flex justify-content-center links">
+                <a style="color:red;" href='/'>Go Back</a>
+              </div>
+            </div>   
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/main.js"></script>
+</html>

@@ -1,0 +1,54 @@
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="page-content page-container" id="page-content">
+          <div class="card-header">
+            <h3 style="color: white;">Edit Task</h3>
+          </div>
+              <form action="/task/update_task" method="POST" id="editTask">
+                <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="row align-items-center">
+                        <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" data-placeholder="&#xe82a;"><i class="fas fa-tags"></i></span>
+                          </div>
+                          <input class="form-control" type="text" name="task" placeholder="Task Name" required>
+                        </div>
+                      </div>
+                      
+                      <div class="row align-items-center mt-4">
+                            <label for="exampleFormControlTextarea1">Task Description:</label>
+                            <textarea class="form-control" form="createTask" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      
+                      
+                      <div class="row justify-content-start mt-4">
+                        <div class="col">
+                          <div class="form-group">
+                            <input type="hidden" name="uuid">
+                            <!-- <button type="submit" class="btn btn-primary mt-4">Create Task</button> -->
+                            <input type="submit" value="Edit Task" class="btn login_btn">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  
+                </div>
+              </form>
+              <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                  <a style="color:red;" href='/task/taskList'>Go Back</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
